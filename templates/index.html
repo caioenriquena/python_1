@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fomulário | Ação</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(to right, darkred, black);
+        }
+        .box{
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 15px;
+            border-radius: 15px;
+            width: 20%;
+        }
+        fieldset{
+            border: 3px solid darkred;
+            border-radius: 20px;
+        }
+        legend{
+            border: 1px solid darkred;
+            padding: 10px;
+            text-align: center;
+            background-color: darkred;
+            border-radius: 10px;
+
+        }
+        .inputBox{
+            position: relative;
+        }
+        .inputUser{
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color: white;
+            font-size: 15px;
+            width: 100%;
+            letter-spacing: 2px;
+        }
+        .labelInput{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            pointer-events: none;
+            transition: .5s;
+        }
+        .inputUser:focus ~ .labelInput,
+        .inputUser:valid ~ .labelInput{
+            top: -20px;
+            font-size: 12px;
+            color: darkred;
+        }
+        #data_nascimento{
+            border: none;
+            padding: 8px;
+            border-radius: 10px;
+            outline: none;
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #enviar{
+            background-image: linear-gradient(to right,rgba(17, 17, 17, 0.945), rgba(240, 4, 4, 0.815));
+            width: 100%;
+            border: none;
+            padding: 15px;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        #enviar:hover{
+            background-image: linear-gradient(to right,rgba(17, 17, 17, 0.151), rgb(240, 4, 4));
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <form  action="proxima_pagina.html" method="get">
+
+            <fieldset>
+
+                <legend><b>Pesquisa de Satisfação</b></legend>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="gosto" id="gosto" class="inputUser" required>
+                    <label for="gosto" class="labelInput">Gosto músical </label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="como_chegou" id="como_chegou" class="inputUser" required>
+                    <label for="como_chegou" class="labelInput">Como chegou aqui?</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="informe" id="informe" class="inputUser" required>
+                    <label for="informe" class="labelInput">Informe o que achou da plataforma</label>
+                </div>
+
+                    <p>Nota para plataforma
+                        <br><br>
+
+                        <input type="radio" name="nota1"  id="nota1" value="nota1">
+                        <label for="nota1">1</label>
+                        <br><br>
+                        <input type="radio" name="nota2"  id="nota2" value="nota2">
+                        <label for="nota2">2</label>
+                        <br><br>
+                        <input type="radio" name="nota3"  id="nota3" value="nota3">
+                        <label for="nota3">3</label>
+                        <br><br>
+                        <input type="radio" name="nota4"  id="nota4" value="nota4">
+                        <label for="nota4">4</label>
+                        <br><br>
+                        <input type="radio" name="nota5"  id="nota5" value="nota5">
+                        <label for="nota5">5</label>
+
+                    </p>
+                    <br>
+
+                    <label for="data_nascimento"><b>Informe sua data de nascimento</b></label>
+                    <input type="date" name="data_nascimento" id="data_nascimento"  required>
+
+
+
+
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="cidade" id="cidade" class="inputUser" required>
+                        <label for="data_nascimento" class="labelInput"> Cidade:</label>
+
+
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="estado" id="estado" class="inputUser" required>
+                        <label for="estado" class="labelInput">Estado:</label>
+
+
+                    </div>
+                    <br><br>
+
+                    <input type="submit" name="enviar" id="enviar" href="proxima_pagina" >
+
+                </div>
+
+            </fieldset>
+
+        </form>
+
+    </div>
+</body>
+</html>
